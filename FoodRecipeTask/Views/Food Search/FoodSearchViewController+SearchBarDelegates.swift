@@ -30,6 +30,17 @@ extension FoodSearchViewController: UISearchBarDelegate{
         foodTypeTableView.reloadData()
     }
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        
+        isShowSearchHistory = true
+        
+        if let searchHistories = defaults.stringArray(forKey: K.UserDefaultsData.recipeSearchHistory){
+            recipeSearchHistory = searchHistories
+        }
+                
+        foodTypeTableView.reloadData()
+    }
+    
     
     
 }

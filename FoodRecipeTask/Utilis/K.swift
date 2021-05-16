@@ -12,6 +12,7 @@ struct K{
     struct UserDefaultsData{
         static let userName = "userName"
         static let email = "email"
+        static let recipeSearchHistory = "search history"
     }
     
     
@@ -21,4 +22,5 @@ struct K{
     }
     
     static let recipeSearchFileName = "recipe_search_queries"
+    
 }

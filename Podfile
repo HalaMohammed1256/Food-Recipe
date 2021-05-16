@@ -10,9 +10,9 @@ target 'FoodRecipeTask' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Alamofire', '~> 4.9.1'
-  pod 'ReachabilitySwift'
   pod 'IQKeyboardManagerSwift'
   pod 'Kingfisher', '~> 6.0'
+  pod 'JGProgressHUD'
 
   
 

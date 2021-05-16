@@ -16,6 +16,8 @@ extension FoodSearchViewController: UITableViewDelegate, UITableViewDataSource{
         
         if isFilled{
             numberOfRows = filteredFoodTypes.count
+        }else if isShowSearchHistory{
+            numberOfRows = recipeSearchHistory.count
         }else{
             numberOfRows = 1
         }
@@ -25,7 +27,7 @@ extension FoodSearchViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if isFilled{
+        if isFilled || isShowSearchHistory{
             let foodNameCell = TextNameTableViewCell()
             return foodNameCell.frame.height + 10
         }else{
@@ -44,6 +46,11 @@ extension FoodSearchViewController: UITableViewDelegate, UITableViewDataSource{
             cell.textNameLabel.textAlignment = .left
                         
             
+        }else if isShowSearchHistory{
+            
+            cell.textNameLabel.text = recipeSearchHistory[indexPath.row]
+            cell.textNameLabel.textAlignment = .left
+            
         }else{
             
             cell.textNameLabel.text = "Search For Food Recipe"
@@ -60,7 +67,26 @@ extension FoodSearchViewController: UITableViewDelegate, UITableViewDataSource{
         if isFilled{
             navigationController?.pushViewController(foodRecipesViewController, animated: true)
             foodRecipesViewController.recipeCategoryName = filteredFoodTypes[indexPath.row]
+            
+            if recipeSearchHistory.count < 10 && !recipeSearchHistory.contains(filteredFoodTypes[indexPath.row]){
+                recipeSearchHistory.append(filteredFoodTypes[indexPath.row])
+                defaults.set(recipeSearchHistory, forKey: K.UserDefaultsData.recipeSearchHistory)
+            }else if recipeSearchHistory.count == 10 && !recipeSearchHistory.contains(filteredFoodTypes[indexPath.row]){
+                recipeSearchHistory.removeFirst()
+                recipeSearchHistory.append(filteredFoodTypes[indexPath.row])
+                defaults.set(recipeSearchHistory, forKey: K.UserDefaultsData.recipeSearchHistory)
+            }
+            
+            
+        }else if isShowSearchHistory{
+            navigationController?.pushViewController(foodRecipesViewController, animated: true)
+            foodRecipesViewController.recipeCategoryName = recipeSearchHistory[indexPath.row]
         }
+        
+        
+        
     }
+    
+    
     
 }

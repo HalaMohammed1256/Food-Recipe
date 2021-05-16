@@ -18,9 +18,11 @@ class FoodSearchViewController: UIViewController {
     
     
     var isFilled: Bool = false
+    var isShowSearchHistory: Bool = false
     var filteredFoodTypes = [String]()
     var recipeSearchHistory = [String]()
     var presenter: FoodSearchPresenter?
+    var defaults = UserDefaults.standard
     
     
     // outlets
