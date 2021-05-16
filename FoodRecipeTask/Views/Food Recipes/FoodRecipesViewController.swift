@@ -7,13 +7,14 @@
 
 import UIKit
 import Kingfisher
+import JGProgressHUD
 
 class FoodRecipesViewController: UIViewController {
     
     // variables
     var recipeCategoryName: String?
     var presenter: FoodRecipesPresenter?
-    
+    private let spinner = JGProgressHUD(style: .dark)
     
     // outlets
     
@@ -74,11 +75,15 @@ extension FoodRecipesViewController: FoodRecipesView{
     }
     
     func startAnimating() {
-        //
+        DispatchQueue.main.async {
+            self.spinner.show(in: self.view)
+        }
     }
     
     func stopAnimating() {
-        //
+        DispatchQueue.main.async {
+            self.spinner.dismiss()
+        }
     }
     
     func showDescriptionAlert(description: String) {

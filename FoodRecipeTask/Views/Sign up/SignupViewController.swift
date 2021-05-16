@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class SignupViewController: UIViewController {
     
@@ -13,6 +14,7 @@ class SignupViewController: UIViewController {
     var passwordVisibility: (UIButton, String)?
     var confirmPasswordVisibility: (UIButton, String)?
     var presenter: SignupPresenter?
+    private let spinner = JGProgressHUD(style: .dark)
     
     
     // outlets
@@ -157,11 +159,15 @@ class SignupViewController: UIViewController {
 extension SignupViewController: SignupView{
     
     func startAnimating() {
-        
+        DispatchQueue.main.async {
+            self.spinner.show(in: self.view)
+        }
     }
     
     func stopAnimating() {
-        //
+        DispatchQueue.main.async {
+            self.spinner.dismiss()
+        }
     }
     
     func showDescriptionAlert(description: String) {

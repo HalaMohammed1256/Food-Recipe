@@ -9,8 +9,7 @@ import Foundation
 
 
 protocol FoodSearchView: class{
-    func startAnimating()
-    func stopAnimating()
+
     func showDescriptionAlert(description: String)
     
 }
@@ -33,9 +32,7 @@ class FoodSearchPresenter: FoodSearcViewPresenter{
     }
     
     func getRecipeSearchQueriesFromFile(){
-        
-        view?.startAnimating()
-        
+                
         // used when the file exist in xcode project
         guard let path = Bundle.main.path(forResource: K.recipeSearchFileName, ofType: "txt") else{
             return
@@ -45,9 +42,7 @@ class FoodSearchPresenter: FoodSearcViewPresenter{
             
             let readFile = try String(contentsOfFile: path, encoding: String.Encoding.utf8)
             foodTypes = readFile.components(separatedBy: "\r")
-                        
-            view?.stopAnimating()
-            
+                                    
         }catch let error as NSError {
             print(error)
         }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class RecipeDetailsViewController: UIViewController {
     
@@ -13,6 +14,7 @@ class RecipeDetailsViewController: UIViewController {
     var presenter: RecipeDetailsPresenter?
     var recipeID: String?
     var recipeSourceURL: String?
+    private let spinner = JGProgressHUD(style: .dark)
     
     // outlets
     @IBOutlet weak var recipeImageView: UIImageView!
@@ -64,11 +66,15 @@ class RecipeDetailsViewController: UIViewController {
 
 extension RecipeDetailsViewController: RecipeDetailsView{
     func startAnimating() {
-        
+        DispatchQueue.main.async {
+            self.spinner.show(in: self.view)
+        }
     }
     
     func stopAnimating() {
-        
+        DispatchQueue.main.async {
+            self.spinner.dismiss()
+        }
     }
     
     func reloadData() {

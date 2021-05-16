@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class LoginViewController: UIViewController {
     
     // variables
     var passwordVisibility: (UIButton, String)?
     var presenter: LoginPresenter?
+    private let spinner = JGProgressHUD(style: .dark)
+    
     
     
     // outlets
@@ -126,11 +129,15 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: LoginView{
     func startAnimating() {
-        
+        DispatchQueue.main.async {
+            self.spinner.show(in: self.view)
+        }
     }
     
     func stopAnimating() {
-        //
+        DispatchQueue.main.async {
+            self.spinner.dismiss()
+        }
     }
     
     func showDescriptionAlert(description: String) {

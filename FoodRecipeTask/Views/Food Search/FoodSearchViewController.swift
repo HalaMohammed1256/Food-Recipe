@@ -94,13 +94,7 @@ class FoodSearchViewController: UIViewController {
 
 
 extension FoodSearchViewController: FoodSearchView{
-    func startAnimating() {
-        //
-    }
     
-    func stopAnimating() {
-        //
-    }
     
     func showDescriptionAlert(description: String) {
         ShowAlert.instance.showAlert(title: nil, message: description, style: .alert, view: self, okHandler: nil)
