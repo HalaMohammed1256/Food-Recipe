@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecipeDetailsViewController" customModule="FoodRecipeTask" customModuleProvider="target">
+            <connections>
+                <outlet property="recipeDetailsTableView" destination="duC-3c-cnd" id="Uv7-rk-0e7"/>
+                <outlet property="recipeImageView" destination="Ur2-Pb-eSv" id="VzJ-Ls-fmJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="Ur2-Pb-eSv">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="295.5"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="duC-3c-cnd">
+                    <rect key="frame" x="0.0" y="295.5" width="414" height="566.5"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Ur2-Pb-eSv" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.33" id="3S5-vI-kAW"/>
+                <constraint firstItem="Ur2-Pb-eSv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="66W-AL-bvZ"/>
+                <constraint firstItem="duC-3c-cnd" firstAttribute="top" secondItem="Ur2-Pb-eSv" secondAttribute="bottom" id="H7M-wD-z5N"/>
+                <constraint firstItem="duC-3c-cnd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JOc-d9-IBV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="duC-3c-cnd" secondAttribute="trailing" id="VRa-Ky-kgP"/>
+                <constraint firstItem="Ur2-Pb-eSv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bvr-fl-0TD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="duC-3c-cnd" secondAttribute="bottom" id="mrR-JD-pf5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ur2-Pb-eSv" secondAttribute="trailing" id="xHy-8A-Qau"/>
+            </constraints>
+            <point key="canvasLocation" x="-181.15942028985509" y="80.357142857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pizza" width="680" height="454"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

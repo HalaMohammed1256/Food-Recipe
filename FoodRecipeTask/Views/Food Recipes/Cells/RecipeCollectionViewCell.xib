@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RecipeCollectionViewCell" customModule="FoodRecipeTask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="312" height="328"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="312" height="328"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="eOK-bZ-0L8">
+                        <rect key="frame" x="0.0" y="0.0" width="312" height="243"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kap-Sr-8S7">
+                        <rect key="frame" x="8" y="251" width="304" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brg-AB-aRd">
+                        <rect key="frame" x="8" y="280.5" width="304" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="highlightedColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="eOK-bZ-0L8" secondAttribute="trailing" id="0cz-2n-AM0"/>
+                <constraint firstItem="Brg-AB-aRd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="1eF-r6-OjO"/>
+                <constraint firstItem="eOK-bZ-0L8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4dU-Or-Jvq"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="eOK-bZ-0L8" secondAttribute="bottom" constant="85" id="DsN-Y6-aPv"/>
+                <constraint firstItem="Brg-AB-aRd" firstAttribute="top" secondItem="Kap-Sr-8S7" secondAttribute="bottom" constant="8" id="IPQ-1o-C8v"/>
+                <constraint firstItem="Kap-Sr-8S7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="JZx-au-ZP7"/>
+                <constraint firstAttribute="trailing" secondItem="Brg-AB-aRd" secondAttribute="trailing" id="Pzf-pa-bnO"/>
+                <constraint firstItem="Kap-Sr-8S7" firstAttribute="top" secondItem="eOK-bZ-0L8" secondAttribute="bottom" constant="8" id="jUN-Vn-47W"/>
+                <constraint firstAttribute="trailing" secondItem="Kap-Sr-8S7" secondAttribute="trailing" id="m6A-qJ-9LW"/>
+                <constraint firstItem="eOK-bZ-0L8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zOd-4b-mfC"/>
+            </constraints>
+            <size key="customSize" width="312" height="328"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="20"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="recipeImageView" destination="eOK-bZ-0L8" id="DyS-Ke-EeD"/>
+                <outlet property="recipeNameLabel" destination="Kap-Sr-8S7" id="kW8-hp-RID"/>
+                <outlet property="recipePublisherName" destination="Brg-AB-aRd" id="iuO-PC-gvW"/>
+            </connections>
+            <point key="canvasLocation" x="166.66666666666669" y="174.10714285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="pizza" width="680" height="454"/>
+    </resources>
+</document>

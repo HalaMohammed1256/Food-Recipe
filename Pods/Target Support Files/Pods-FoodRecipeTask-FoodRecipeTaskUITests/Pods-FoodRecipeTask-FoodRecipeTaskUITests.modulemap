@@ -1,0 +1,6 @@
+framework module Pods_FoodRecipeTask_FoodRecipeTaskUITests {
+  umbrella header "Pods-FoodRecipeTask-FoodRecipeTaskUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
