@@ -42,6 +42,7 @@
 		2B897F3E264ECDBA00CA760E /* ApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B897F3D264ECDBA00CA760E /* ApiServices.swift */; };
 		2B897F65264ED23800CA760E /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B897F64264ED23800CA760E /* Recipes.swift */; };
 		2B897F6A264ED33F00CA760E /* RecipeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B897F69264ED33F00CA760E /* RecipeDetails.swift */; };
+		2BDFA85F265225860068A4CE /* EntryPointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFA85E265225860068A4CE /* EntryPointViewController.swift */; };
 		2BFA5299264B829400C9DBB6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BFA5298264B829300C9DBB6 /* GoogleService-Info.plist */; };
 		2BFC8CC32649B1E200E86767 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFC8CC22649B1E200E86767 /* AppDelegate.swift */; };
 		2BFC8CCF2649B1E300E86767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BFC8CCE2649B1E300E86767 /* Assets.xcassets */; };
@@ -114,6 +115,7 @@
 		2B897F3D264ECDBA00CA760E /* ApiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServices.swift; sourceTree = "<group>"; };
 		2B897F64264ED23800CA760E /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
 		2B897F69264ED33F00CA760E /* RecipeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetails.swift; sourceTree = "<group>"; };
+		2BDFA85E265225860068A4CE /* EntryPointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryPointViewController.swift; sourceTree = "<group>"; };
 		2BFA5298264B829300C9DBB6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2BFC8CBF2649B1E200E86767 /* FoodRecipeTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodRecipeTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BFC8CC22649B1E200E86767 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -234,6 +236,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		2BDFA85D265225630068A4CE /* Entry point */ = {
+			isa = PBXGroup;
+			children = (
+				2BDFA85E265225860068A4CE /* EntryPointViewController.swift */,
+			);
+			path = "Entry point";
+			sourceTree = "<group>";
+		};
 		2BFC8CB62649B1E200E86767 = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +306,7 @@
 		2BFC8CF82649B29A00E86767 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2BDFA85D265225630068A4CE /* Entry point */,
 				2B892C6A264B3A490049D1BF /* Common Cell */,
 				2BFC8D1A2649B89800E86767 /* Login */,
 				2BFC8D1B2649B8A000E86767 /* Sign up */,
@@ -716,6 +727,7 @@
 				2B897F65264ED23800CA760E /* Recipes.swift in Sources */,
 				2B897F39264ECD3600CA760E /* ApiURLs.swift in Sources */,
 				2BFC8D072649B32700E86767 /* MainColors.swift in Sources */,
+				2BDFA85F265225860068A4CE /* EntryPointViewController.swift in Sources */,
 				2B892C45264B2BC50049D1BF /* FoodSearchViewController+TableViewDelegates.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

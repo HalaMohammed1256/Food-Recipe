@@ -82,7 +82,7 @@ class FoodSearchViewController: UIViewController {
         
         do{
             try Auth.auth().signOut()
-            navigationController?.popToViewController(loginViewController, animated: true)
+            self.navigationController?.pushViewController(loginViewController, animated: true)
         }catch let error as NSError{
             print(error)
         }

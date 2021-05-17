@@ -27,8 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-
-        isUserLogin()
+        
+        
+        window?.rootViewController = UINavigationController(rootViewController: EntryPointViewController())
         
         window?.makeKeyAndVisible()
         
@@ -38,19 +39,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
-}
-
-
-extension AppDelegate{
-    
-    func isUserLogin(){
-        if Auth.auth().currentUser == nil{
-            window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
-        }else{
-            window?.rootViewController = UINavigationController(rootViewController: FoodSearchViewController())
-        }
-
-    }
-    
 }
 

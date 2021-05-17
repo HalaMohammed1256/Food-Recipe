@@ -55,11 +55,13 @@ class LoginViewController: UIViewController {
     
     func configureUI(){
         
-        navigationController?.setToolbarHidden(true, animated: true)
+        navigationController?.setNavigationBarHidden(true, animated: true)
         
         view.backgroundColor = MainColors.primaryColor
         welcomeBackLabel.setTextWithAnimation(text: "Welcome back!")
         
+        
+
         
         emailTextField.insertPadding()
         passwordTextField.insertPadding()
@@ -74,6 +76,16 @@ class LoginViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
     
     // Actions
     
