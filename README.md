@@ -1,8 +1,5 @@
 # Food-Recipe-eSpace-task
 
-task for eSpace company 
-eSpace company website: https://espace.com.eg/
-
 
 Food Recipe is an iOS application designed to aid home-cooks find recipes attuned to the ingredients they have with them, cutting grocery costs, improving environmental sustainability and ultimately promoting home cooking.
 
