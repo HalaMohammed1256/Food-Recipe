@@ -24,6 +24,9 @@ TODO :
  
  
  
+ 
+ 
+ 
 TODO :
 
  Alamofire
@@ -38,7 +41,10 @@ TODO :
 
 
 
+
+
 The challenge for me is to use Nib file for all project, that is the first time for me
+
 
 
 
